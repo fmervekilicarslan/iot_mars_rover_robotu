@@ -1,26 +1,25 @@
-# 🛠️ IoT ve Yapay Zeka Tabanlı Kestirimci Bakım Sistemi (Predictive Maintenance)
+# 🤖 Mars Rover Konseptli Kestirimci Bakım Robotu (IoT & AI)
 
-Bu proje, sistemlerin sağlık durumunu anlık olarak izlemek, olası arızaları önceden tespit etmek ve bulut üzerinden yönetmek amacıyla geliştirilmiş kapsamlı bir **IoT (Nesnelerin İnterneti)** uygulamasıdır.
+Bu proje, endüstriyel sahalarda ortam denetimi yapmak ve arızaları önceden tespit etmek (Kestirimci Bakım) amacıyla geliştirilmiş, **uzaktan kontrol edilebilen** ve **otonom özelliklere sahip** bir robot prototipidir.
 
 ## 👥 Proje Hakkında
-Sınıf arkadaşlarımla birlikte **takım çalışması** olarak geliştirdiğimiz bu projede; endüstriyel bir senaryoyu simüle eden bir yapı kurduk. Sistemimiz, ortamdan ve cihaz üzerinden topladığı verileri analiz ederek bir sorun oluşmadan önce müdahale edilmesine olanak sağlar.
+Sınıf arkadaşlarımla bir **takım çalışması** olarak geliştirdiğimiz bu projede; Mars Rover araçlarından ilham alan bir robot tasarladık. Sistem, Raspberry Pi merkezli bir mimari ile çalışmakta olup, hem kendi kararlarını verebilmekte hem de bir operatör tarafından yönetilebilmektedir.
 
-Projemiz şu temel gereksinimleri karşılayacak şekilde tasarlanmıştır:
-* **Merkezi Kontrol:** Raspberry Pi kullanılarak sistemin yönetilmesi.
-* **Veri Toplama:** En az **5 farklı sensör** ile ortam ve cihaz verilerinin (sıcaklık, titreşim, akım vb.) toplanması.
-* **Aksiyon:** Gelen verilere göre **3 farklı Actuator** (Motor, Fan, Alarm vb.) tetiklenerek sisteme müdahale edilmesi.
-* **Bulut Entegrasyonu:** Tüm verilerin **Bulut Tabanlı bir IoT Platformuna** aktarılarak uzaktan monitörize edilmesi.
+### ⚙️ Sistemin Temel Yetenekleri
+* **Uzaktan Kontrol Paneli (Desktop Dashboard):** Geliştirdiğimiz masaüstü arayüzü sayesinde robotun hareketleri bilgisayar üzerinden manuel olarak kontrol edilebilir.
+* **Canlı İzleme:** Üzerindeki **5+ farklı sensörden** gelen veriler (sıcaklık, gaz, titreşim vb.) anlık olarak kontrol paneline ve bulut sistemine aktarılır.
+* **Otonom Müdahale:** Kritik durumlarda (örneğin gaz kaçağı veya aşırı ısınma) robot üzerindeki **3 farklı eyleyiciyi (actuator)** otomatik olarak devreye sokar.
+* **Hibrit Sürüş:** Sistem hem otonom olarak ortamı tarayabilir hem de manuel modda spesifik noktalara yönlendirilebilir.
 
 ## 🧠 Benim Projedeki Rolüm: Yapay Zeka ve Karar Destek
-Bu ekip çalışmasında ben, toplanan verilerin anlamlandırılması ve sistemin "akıllı" kararlar vermesini sağlayan **Yapay Zeka** tarafına odaklandım.
+Bu ekip çalışmasında ben, robotun "karar verme mekanizması" ve "veri analitiği" süreçlerine odaklandım:
 
-Sensörlerden akan ham verileri alıp işleyerek şunları gerçekleştirdim:
-* **Karar Destek Algoritmaları:** Sistemin sadece belirlenen eşik değerlerine göre değil, verilerin gidişatına göre akıllı kararlar vermesini sağlayan algoritmaların geliştirilmesi.
-* **Anomali Tespiti:** Sistem normal çalışırken oluşan en ufak sapmaların yapay zeka algoritmalarıyla tespit edilmesi ve kestirimci bakım uyarısı verilmesi.
-* **Veri Analizi:** Raspberry Pi üzerinde çalışan Python kodları ile verilerin analiz edilip aksiyon mekanizmasının (Actuator'ların) doğru zamanda tetiklenmesinin sağlanması.
+* **Yapay Zeka Destekli Karar:** Sensörlerden gelen ham verilerin işlenmesi ve anomali tespiti algoritmalarının geliştirilmesi.
+* **Veri Analizi:** Sistemin sadece belirlenen eşik değerlerine göre değil, verilerin akışına göre akıllı aksiyonlar almasını sağlayan Python kodlarının yazılması.
+* **Backend Entegrasyonu:** Sensör verilerinin kontrol paneli ve bulut platformu ile haberleşmesinde ekip arkadaşlarımla birlikte aktif rol aldım.
 
 ## 🛠️ Kullanılan Teknolojiler
-* **Donanım:** Raspberry Pi (Ana Sunucu), Sensör Seti (5+ Adet), Actuatorler (3 Adet)
-* **Yazılım:** Python (Yapay Zeka ve Backend Kodları)
+* **Donanım:** Raspberry Pi (Ana Sunucu), Sensör Seti, DC Motorlar
+* **Yazılım:** Python (AI & Backend), Masaüstü Kontrol Arayüzü (GUI)
 * **IoT:** Bulut Tabanlı İzleme Platformu (Cloud Monitoring)
-* **Yöntem:** Kestirimci Bakım (Predictive Maintenance) Prensipleri
+* **Konsept:** Kestirimci Bakım (Predictive Maintenance) & Tele-Operasyon
